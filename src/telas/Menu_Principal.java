@@ -30,7 +30,7 @@ public class Menu_Principal extends javax.swing.JFrame {
         btnUsuariosMenu = new javax.swing.JButton();
         btnTurmasMenu = new javax.swing.JButton();
         btnAlunosMenu = new javax.swing.JButton();
-        btnVoltar = new javax.swing.JButton();
+        btnVoltarMenu = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -53,7 +53,7 @@ public class Menu_Principal extends javax.swing.JFrame {
             }
         });
 
-        btnVoltar.setText("Voltar");
+        btnVoltarMenu.setText("Voltar");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -69,7 +69,7 @@ public class Menu_Principal extends javax.swing.JFrame {
                             .addComponent(btnAlunosMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(29, 29, 29)
-                                .addComponent(btnVoltar)))
+                                .addComponent(btnVoltarMenu)))
                         .addGap(9, 9, 9))
                     .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addContainerGap(128, Short.MAX_VALUE))
@@ -86,7 +86,7 @@ public class Menu_Principal extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnAlunosMenu)
                 .addGap(70, 70, 70)
-                .addComponent(btnVoltar)
+                .addComponent(btnVoltarMenu)
                 .addGap(31, 31, 31))
         );
 
@@ -140,7 +140,7 @@ public class Menu_Principal extends javax.swing.JFrame {
     private javax.swing.JButton btnAlunosMenu;
     private javax.swing.JButton btnTurmasMenu;
     private javax.swing.JButton btnUsuariosMenu;
-    private javax.swing.JButton btnVoltar;
+    private javax.swing.JButton btnVoltarMenu;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
