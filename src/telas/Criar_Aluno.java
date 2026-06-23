@@ -8,12 +8,12 @@ package telas;
  *
  * @author augusto62170066
  */
-public class Atualizar_Turma extends javax.swing.JFrame {
+public class Criar_Aluno extends javax.swing.JFrame {
 
     /**
-     * Creates new form Atualizar_Turma
+     * Creates new form Criar_Aluno
      */
-    public Atualizar_Turma() {
+    public Criar_Aluno() {
         initComponents();
     }
 
@@ -28,66 +28,75 @@ public class Atualizar_Turma extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        txtNomeCriarAluno = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        txtIdAtualizarTurma = new javax.swing.JTextField();
-        txtNomeAtualizarTurma = new javax.swing.JTextField();
-        btnAtualizarTurma = new javax.swing.JButton();
-        btnVoltarAtualizarTurma = new javax.swing.JButton();
+        txtCpfCriarAluno = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+        txtTurmaCriarAluno = new javax.swing.JTextField();
+        btnCriarAluno = new javax.swing.JButton();
+        btnVoltarCriarAluno = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel1.setText("Atualizar Turma");
+        jLabel1.setText("Criar Aluno");
 
-        jLabel2.setText("ID:");
+        jLabel2.setText("Nome:");
 
-        jLabel3.setText("Nome:");
+        jLabel3.setText("CPF:");
 
-        btnAtualizarTurma.setText("Atualizar Turma");
+        jLabel4.setText("Turma:");
 
-        btnVoltarAtualizarTurma.setText("Voltar");
+        btnCriarAluno.setText("Criar Aluno");
+
+        btnVoltarCriarAluno.setText("Voltar");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(239, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addGap(235, 235, 235))
             .addGroup(layout.createSequentialGroup()
+                .addGap(53, 53, 53)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(171, 171, 171)
-                        .addComponent(jLabel1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(63, 63, 63)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(btnAtualizarTurma)
-                                .addGap(18, 18, 18)
-                                .addComponent(btnVoltarAtualizarTurma))
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jLabel3)
-                                .addComponent(jLabel2)
-                                .addComponent(txtIdAtualizarTurma, javax.swing.GroupLayout.DEFAULT_SIZE, 377, Short.MAX_VALUE)
-                                .addComponent(txtNomeAtualizarTurma)))))
-                .addContainerGap(69, Short.MAX_VALUE))
+                        .addComponent(btnCriarAluno)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnVoltarCriarAluno))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jLabel4)
+                        .addComponent(jLabel3)
+                        .addComponent(jLabel2)
+                        .addComponent(txtNomeCriarAluno, javax.swing.GroupLayout.DEFAULT_SIZE, 483, Short.MAX_VALUE)
+                        .addComponent(txtCpfCriarAluno)
+                        .addComponent(txtTurmaCriarAluno)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(19, 19, 19)
+                .addGap(21, 21, 21)
                 .addComponent(jLabel1)
-                .addGap(71, 71, 71)
+                .addGap(43, 43, 43)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(txtIdAtualizarTurma, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtNomeCriarAluno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(txtNomeAtualizarTurma, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
+                .addComponent(txtCpfCriarAluno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(txtTurmaCriarAluno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(41, 41, 41)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnVoltarAtualizarTurma)
-                    .addComponent(btnAtualizarTurma))
-                .addGap(43, 43, 43))
+                    .addComponent(btnCriarAluno)
+                    .addComponent(btnVoltarCriarAluno))
+                .addContainerGap(50, Short.MAX_VALUE))
         );
 
         pack();
@@ -110,31 +119,33 @@ public class Atualizar_Turma extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Atualizar_Turma.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Criar_Aluno.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Atualizar_Turma.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Criar_Aluno.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Atualizar_Turma.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Criar_Aluno.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Atualizar_Turma.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Criar_Aluno.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Atualizar_Turma().setVisible(true);
+                new Criar_Aluno().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAtualizarTurma;
-    private javax.swing.JButton btnVoltarAtualizarTurma;
+    private javax.swing.JButton btnCriarAluno;
+    private javax.swing.JButton btnVoltarCriarAluno;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JTextField txtIdAtualizarTurma;
-    private javax.swing.JTextField txtNomeAtualizarTurma;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JTextField txtCpfCriarAluno;
+    private javax.swing.JTextField txtNomeCriarAluno;
+    private javax.swing.JTextField txtTurmaCriarAluno;
     // End of variables declaration//GEN-END:variables
 }

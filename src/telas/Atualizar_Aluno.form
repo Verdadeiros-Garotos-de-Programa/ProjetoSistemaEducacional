@@ -26,49 +26,61 @@
           <Group type="102" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="171" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="219" max="-2" attributes="0"/>
                       <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
-                              <Component id="btnAtualizarTurma" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnAtualizarAluno" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="btnVoltarAtualizarTurma" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnVoltarAtualizarAluno" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtIdAtualizarTurma" alignment="0" pref="377" max="32767" attributes="0"/>
-                              <Component id="txtNomeAtualizarTurma" alignment="0" max="32767" attributes="0"/>
+                              <Component id="txtIdAtualizarAluno" pref="464" max="32767" attributes="0"/>
+                              <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtNomeAtualizarAluno" alignment="0" max="32767" attributes="0"/>
+                              <Component id="txtCpfAtualizarAluno" alignment="0" max="32767" attributes="0"/>
+                              <Component id="txtTurmaAtualizarAluno" alignment="0" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace pref="69" max="32767" attributes="0"/>
+              <EmptySpace pref="76" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="71" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
               <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="txtIdAtualizarTurma" min="-2" max="-2" attributes="0"/>
+              <Component id="txtIdAtualizarAluno" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="txtNomeAtualizarTurma" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="48" max="32767" attributes="0"/>
+              <Component id="txtNomeAtualizarAluno" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="txtCpfAtualizarAluno" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="txtTurmaAtualizarAluno" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="btnVoltarAtualizarTurma" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="btnAtualizarTurma" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnAtualizarAluno" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnVoltarAtualizarAluno" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
+              <EmptySpace pref="37" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -79,7 +91,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Segoe UI" size="24" style="0"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Atualizar Turma"/>
+        <Property name="text" type="java.lang.String" value="Atualizar Aluno"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">
@@ -87,21 +99,35 @@
         <Property name="text" type="java.lang.String" value="ID:"/>
       </Properties>
     </Component>
+    <Component class="javax.swing.JTextField" name="txtIdAtualizarAluno">
+    </Component>
     <Component class="javax.swing.JLabel" name="jLabel3">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Nome:"/>
+        <Property name="text" type="java.lang.String" value="Novo Nome:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtIdAtualizarTurma">
+    <Component class="javax.swing.JTextField" name="txtNomeAtualizarAluno">
     </Component>
-    <Component class="javax.swing.JTextField" name="txtNomeAtualizarTurma">
-    </Component>
-    <Component class="javax.swing.JButton" name="btnAtualizarTurma">
+    <Component class="javax.swing.JLabel" name="jLabel4">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Atualizar Turma"/>
+        <Property name="text" type="java.lang.String" value="Novo CPF:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="btnVoltarAtualizarTurma">
+    <Component class="javax.swing.JTextField" name="txtCpfAtualizarAluno">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel5">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Nova Turma:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtTurmaAtualizarAluno">
+    </Component>
+    <Component class="javax.swing.JButton" name="btnAtualizarAluno">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Atualizar Aluno"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnVoltarAtualizarAluno">
       <Properties>
         <Property name="text" type="java.lang.String" value="Voltar"/>
       </Properties>
