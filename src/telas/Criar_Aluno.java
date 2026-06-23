@@ -50,6 +50,11 @@ public class Criar_Aluno extends javax.swing.JFrame {
         btnCriarAluno.setText("Criar Aluno");
 
         btnVoltarCriarAluno.setText("Voltar");
+        btnVoltarCriarAluno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVoltarCriarAlunoActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -101,6 +106,13 @@ public class Criar_Aluno extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnVoltarCriarAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarCriarAlunoActionPerformed
+        Alunos telas = new Alunos();
+        telas.setVisible(true);
+        
+        this.dispose();
+    }//GEN-LAST:event_btnVoltarCriarAlunoActionPerformed
 
     /**
      * @param args the command line arguments
