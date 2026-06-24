@@ -99,7 +99,8 @@ public class Menu_Principal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnUsuariosMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUsuariosMenuActionPerformed
-        // TODO add your handling code here:
+        Criar_Usuarios telaCadastro = new Criar_Usuarios();
+        telaCadastro.setVisible(true);
     }//GEN-LAST:event_btnUsuariosMenuActionPerformed
 
     private void btnAlunosMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAlunosMenuActionPerformed

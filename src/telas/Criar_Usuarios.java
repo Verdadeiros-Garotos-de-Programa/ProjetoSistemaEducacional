@@ -33,6 +33,8 @@ public class Criar_Usuarios extends javax.swing.JFrame {
         txtSenhaCriarUsuario = new javax.swing.JTextField();
         btnCriarUsuario = new javax.swing.JButton();
         btnVoltarCriarUsuario = new javax.swing.JButton();
+        cbCargo = new javax.swing.JComboBox<>();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -44,8 +46,22 @@ public class Criar_Usuarios extends javax.swing.JFrame {
         jLabel3.setText("Senha:");
 
         btnCriarUsuario.setText("Criar Usuário");
+        btnCriarUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCriarUsuarioActionPerformed(evt);
+            }
+        });
 
         btnVoltarCriarUsuario.setText("Voltar");
+        btnVoltarCriarUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVoltarCriarUsuarioActionPerformed(evt);
+            }
+        });
+
+        cbCargo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Diretor", "Professor", "Orientador", "Administrativo" }));
+
+        jLabel4.setText("Cargo:");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -63,11 +79,16 @@ public class Criar_Usuarios extends javax.swing.JFrame {
                                 .addComponent(btnCriarUsuario)
                                 .addGap(18, 18, 18)
                                 .addComponent(btnVoltarCriarUsuario))
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jLabel2)
-                                .addComponent(txtNomeCriarUsuario, javax.swing.GroupLayout.DEFAULT_SIZE, 399, Short.MAX_VALUE)
-                                .addComponent(jLabel3)
-                                .addComponent(txtSenhaCriarUsuario)))))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(jLabel4)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(cbCargo, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jLabel2)
+                                    .addComponent(txtNomeCriarUsuario, javax.swing.GroupLayout.DEFAULT_SIZE, 399, Short.MAX_VALUE)
+                                    .addComponent(jLabel3)
+                                    .addComponent(txtSenhaCriarUsuario))))))
                 .addContainerGap(69, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -83,7 +104,11 @@ public class Criar_Usuarios extends javax.swing.JFrame {
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(txtSenhaCriarUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 100, Short.MAX_VALUE)
+                .addGap(33, 33, 33)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cbCargo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel4))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnCriarUsuario)
                     .addComponent(btnVoltarCriarUsuario))
@@ -92,6 +117,22 @@ public class Criar_Usuarios extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnVoltarCriarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarCriarUsuarioActionPerformed
+
+    }//GEN-LAST:event_btnVoltarCriarUsuarioActionPerformed
+
+    private void btnCriarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCriarUsuarioActionPerformed
+        String novoUsuario = txtNomeCriarUsuario.getText().trim();
+    String novaSenha = txtSenhaCriarUsuario.getText().trim();
+    String selecionarCargo = cbCargo.getSelectedItem().toString(); 
+
+    if (novoUsario.isEmpty() || novaSenha.isEmpty()) {
+        javax.swing.JOptionPane.showMessageDialog(this, "preencha todos os campos!");
+        return;
+    }
+    
+    }//GEN-LAST:event_btnCriarUsuarioActionPerformed
 
     /**
      * @param args the command line arguments
@@ -131,9 +172,11 @@ public class Criar_Usuarios extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCriarUsuario;
     private javax.swing.JButton btnVoltarCriarUsuario;
+    private javax.swing.JComboBox<String> cbCargo;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JTextField txtNomeCriarUsuario;
     private javax.swing.JTextField txtSenhaCriarUsuario;
     // End of variables declaration//GEN-END:variables
