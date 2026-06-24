@@ -4,18 +4,23 @@
  */
 package telas;
 
+import usuario.Usuario;
 /**
  *
  * @author augusto62170066
  */
 public class Menu_Principal extends javax.swing.JFrame {
 
+    private Usuario usuarioLogado;
+    
+    public Menu_Principal(Usuario usuario){
+        this.usuarioLogado = usuario;
+        
+        initComponents();
+    }
     /**
      * Creates new form Menu_Principal
      */
-    public Menu_Principal() {
-        initComponents();
-    }
 
     /**
      * This method is called from within the constructor to initialize the form.
