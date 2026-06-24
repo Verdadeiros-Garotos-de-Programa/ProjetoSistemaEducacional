@@ -46,6 +46,11 @@ public class Criar_Usuarios extends javax.swing.JFrame {
         btnCriarUsuario.setText("Criar Usuário");
 
         btnVoltarCriarUsuario.setText("Voltar");
+        btnVoltarCriarUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVoltarCriarUsuarioActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -92,6 +97,13 @@ public class Criar_Usuarios extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnVoltarCriarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarCriarUsuarioActionPerformed
+        Usuarios telas = new Usuarios();
+        telas.setVisible(true);
+        
+        this.dispose();
+    }//GEN-LAST:event_btnVoltarCriarUsuarioActionPerformed
 
     /**
      * @param args the command line arguments

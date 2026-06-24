@@ -46,6 +46,11 @@ public class Atualizar_Turma extends javax.swing.JFrame {
         btnAtualizarTurma.setText("Atualizar Turma");
 
         btnVoltarAtualizarTurma.setText("Voltar");
+        btnVoltarAtualizarTurma.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVoltarAtualizarTurmaActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -92,6 +97,13 @@ public class Atualizar_Turma extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnVoltarAtualizarTurmaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarAtualizarTurmaActionPerformed
+        Turmas telas = new Turmas();
+        telas.setVisible(true);
+        
+        this.dispose();
+    }//GEN-LAST:event_btnVoltarAtualizarTurmaActionPerformed
 
     /**
      * @param args the command line arguments

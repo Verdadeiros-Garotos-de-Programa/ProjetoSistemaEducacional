@@ -42,6 +42,11 @@ public class Criar_Turma extends javax.swing.JFrame {
         btnCriarTurma.setText("Criar Turma");
 
         btnVoltarCriarUsuario.setText("Voltar");
+        btnVoltarCriarUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVoltarCriarUsuarioActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -81,6 +86,13 @@ public class Criar_Turma extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnVoltarCriarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarCriarUsuarioActionPerformed
+        Turmas telas = new Turmas();
+        telas.setVisible(true);
+        
+        this.dispose();
+    }//GEN-LAST:event_btnVoltarCriarUsuarioActionPerformed
 
     /**
      * @param args the command line arguments

@@ -54,6 +54,11 @@ public class Atualizar_Aluno extends javax.swing.JFrame {
         btnAtualizarAluno.setText("Atualizar Aluno");
 
         btnVoltarAtualizarAluno.setText("Voltar");
+        btnVoltarAtualizarAluno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVoltarAtualizarAlunoActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -112,6 +117,13 @@ public class Atualizar_Aluno extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnVoltarAtualizarAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarAtualizarAlunoActionPerformed
+        Alunos telas = new Alunos();
+        telas.setVisible(true);
+        
+        this.dispose();
+    }//GEN-LAST:event_btnVoltarAtualizarAlunoActionPerformed
 
     /**
      * @param args the command line arguments
