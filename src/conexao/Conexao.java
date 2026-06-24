@@ -6,21 +6,17 @@ import java.sql.SQLException;
 
 public class Conexao {
     
-    private static String URL = "jdbc:mysql://localhost:3306/db_gestao_escolar";
-    private static String USUARIO = "root";
-    private static String SENHA = "root";
+    private static final String URL = "jdbc:mysql://localhost:3306/db_gestao_escolar";
+    private static final String USUARIO = "root";
+    private static final String SENHA = "root";
     
-    public static Connection conectar() {
-        try{
-            Connection conn = DriverManager.getConnection(URL,USUARIO,SENHA);
-            System.out.println("Conectado!");
-            return conn;
+    public static Connection getConnection() throws SQLException {
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            return DriverManager.getConnection(URL, USUARIO, SENHA);
+        } 
+        catch (ClassNotFoundException e) {
+            throw new SQLException("Driver MySQL não encontrato!", e);
         }
-        catch(SQLException e) {
-            System.out.println("Erro na conexão!");
-            e.printStackTrace();
-            return null;
-        }
-    }         
-    
+    }          
 }
