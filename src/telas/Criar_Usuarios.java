@@ -127,7 +127,7 @@ public class Criar_Usuarios extends javax.swing.JFrame {
     String novaSenha = txtSenhaCriarUsuario.getText().trim();
     String selecionarCargo = cbCargo.getSelectedItem().toString(); 
 
-    if (novoUsario.isEmpty() || novaSenha.isEmpty()) {
+    if (novoUsuario.isEmpty() || novaSenha.isEmpty()) {
         javax.swing.JOptionPane.showMessageDialog(this, "preencha todos os campos!");
         return;
     }
