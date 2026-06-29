@@ -3,11 +3,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package telas;
-
-/**
- *
- * @author augusto62170066
- */
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import javax.swing.JOptionPane;
+import java.sql.ResultSet;
 public class Atualizar_Aluno extends javax.swing.JFrame {
 
     /**
@@ -52,6 +51,11 @@ public class Atualizar_Aluno extends javax.swing.JFrame {
         jLabel5.setText("Nova Turma:");
 
         btnAtualizarAluno.setText("Atualizar Aluno");
+        btnAtualizarAluno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAtualizarAlunoActionPerformed(evt);
+            }
+        });
 
         btnVoltarAtualizarAluno.setText("Voltar");
 
@@ -112,6 +116,24 @@ public class Atualizar_Aluno extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnAtualizarAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtualizarAlunoActionPerformed
+try{
+    Connection conn = conexao.Conexao.conectar();
+    String sql = "Update aluno SET nome_aluno=?,cpf=?, turma=?  WHERE id_aluno=?";
+    PreparedStatement stmt = conn.prepareStatement(sql);
+    stmt.setString(1, txtNomeAtualizarAluno.getText());
+    stmt.setString(2, txtCpfAtualizarAluno.getText());
+    stmt.setString(3,txtTurmaAtualizarAluno.getText());
+    stmt.setInt(4, Integer.parseInt(txtIdAtualizarAluno.getText()));
+    stmt.execute();
+    JOptionPane.showMessageDialog(null,"Atualizado!!");
+    stmt.close();
+    conn.close();
+}catch(Exception e){
+    e.printStackTrace();
+}
+    }//GEN-LAST:event_btnAtualizarAlunoActionPerformed
 
     /**
      * @param args the command line arguments

@@ -4,10 +4,10 @@
  */
 package telas;
 
-/**
- *
- * @author augusto62170066
- */
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import javax.swing.JOptionPane;
+import java.sql.ResultSet;
 public class Criar_Turma extends javax.swing.JFrame {
 
     /**
@@ -40,6 +40,11 @@ public class Criar_Turma extends javax.swing.JFrame {
         jLabel2.setText("Nome:");
 
         btnCriarTurma.setText("Criar Turma");
+        btnCriarTurma.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCriarTurmaActionPerformed(evt);
+            }
+        });
 
         btnVoltarCriarUsuario.setText("Voltar");
 
@@ -81,6 +86,21 @@ public class Criar_Turma extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnCriarTurmaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCriarTurmaActionPerformed
+        try{
+            Connection conn = conexao.Conexao.conectar();
+            String sql = "INSERT INTO turma(nome_turma) VALUES (?)";
+            PreparedStatement stmt = conn.prepareStatement(sql);
+            stmt.setString(1, txtNomeCriarTurma.getText());
+            stmt.execute();
+            JOptionPane.showMessageDialog(null, "Salvo!");
+            stmt.close();
+            conn.close();
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+    }//GEN-LAST:event_btnCriarTurmaActionPerformed
 
     /**
      * @param args the command line arguments

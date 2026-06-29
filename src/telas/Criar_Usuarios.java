@@ -4,10 +4,10 @@
  */
 package telas;
 
-/**
- *
- * @author augusto62170066
- */
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import javax.swing.JOptionPane;
+import java.sql.ResultSet;
 public class Criar_Usuarios extends javax.swing.JFrame {
 
     /**
@@ -26,6 +26,7 @@ public class Criar_Usuarios extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        txtSenhaCriarUsuario1 = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         txtNomeCriarUsuario = new javax.swing.JTextField();
@@ -33,6 +34,8 @@ public class Criar_Usuarios extends javax.swing.JFrame {
         txtSenhaCriarUsuario = new javax.swing.JTextField();
         btnCriarUsuario = new javax.swing.JButton();
         btnVoltarCriarUsuario = new javax.swing.JButton();
+        txtUsuarioCargo = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -44,8 +47,15 @@ public class Criar_Usuarios extends javax.swing.JFrame {
         jLabel3.setText("Senha:");
 
         btnCriarUsuario.setText("Criar Usuário");
+        btnCriarUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCriarUsuarioActionPerformed(evt);
+            }
+        });
 
         btnVoltarCriarUsuario.setText("Voltar");
+
+        jLabel4.setText("Cargo");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -67,7 +77,9 @@ public class Criar_Usuarios extends javax.swing.JFrame {
                                 .addComponent(jLabel2)
                                 .addComponent(txtNomeCriarUsuario, javax.swing.GroupLayout.DEFAULT_SIZE, 399, Short.MAX_VALUE)
                                 .addComponent(jLabel3)
-                                .addComponent(txtSenhaCriarUsuario)))))
+                                .addComponent(txtSenhaCriarUsuario)
+                                .addComponent(txtUsuarioCargo))
+                            .addComponent(jLabel4))))
                 .addContainerGap(69, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -83,7 +95,11 @@ public class Criar_Usuarios extends javax.swing.JFrame {
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(txtSenhaCriarUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 100, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(txtUsuarioCargo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(36, 36, 36)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnCriarUsuario)
                     .addComponent(btnVoltarCriarUsuario))
@@ -92,6 +108,23 @@ public class Criar_Usuarios extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnCriarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCriarUsuarioActionPerformed
+    try{
+            Connection conn = conexao.Conexao.conectar();
+            String sql = "INSERT INTO aluno(usuario, senha, cargo) VALUES (?,?,?)";
+            PreparedStatement stmt = conn.prepareStatement(sql);
+            stmt.setString(1, txtNomeCriarUsuario.getText());
+            stmt.setString(2, txtSenhaCriarUsuario.getText());
+            stmt.setString(3, txtUsuarioCargo .getText());
+            stmt.execute();
+            JOptionPane.showMessageDialog(null, "Salvo!");
+            stmt.close();
+            conn.close();
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+    }//GEN-LAST:event_btnCriarUsuarioActionPerformed
 
     /**
      * @param args the command line arguments
@@ -134,7 +167,10 @@ public class Criar_Usuarios extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JTextField txtNomeCriarUsuario;
     private javax.swing.JTextField txtSenhaCriarUsuario;
+    private javax.swing.JTextField txtSenhaCriarUsuario1;
+    private javax.swing.JTextField txtUsuarioCargo;
     // End of variables declaration//GEN-END:variables
 }

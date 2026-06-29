@@ -3,11 +3,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package telas;
-
-/**
- *
- * @author augusto62170066
- */
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import javax.swing.JOptionPane;
+import java.sql.ResultSet;
 public class Atualizar_Turma extends javax.swing.JFrame {
 
     /**
@@ -44,6 +43,11 @@ public class Atualizar_Turma extends javax.swing.JFrame {
         jLabel3.setText("Nome:");
 
         btnAtualizarTurma.setText("Atualizar Turma");
+        btnAtualizarTurma.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAtualizarTurmaActionPerformed(evt);
+            }
+        });
 
         btnVoltarAtualizarTurma.setText("Voltar");
 
@@ -92,6 +96,22 @@ public class Atualizar_Turma extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnAtualizarTurmaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtualizarTurmaActionPerformed
+try{
+    Connection conn = conexao.Conexao.conectar();
+    String sql = "Update turma SET nome_turma=? WHERE id_turma=?";
+    PreparedStatement stmt = conn.prepareStatement(sql);
+    stmt.setString(1, txtNomeAtualizarTurma.getText());
+    stmt.setInt(2, Integer.parseInt(txtIdAtualizarTurma.getText()));
+    stmt.execute();
+    JOptionPane.showMessageDialog(null,"Atualizado!!");
+    stmt.close();
+    conn.close();
+}catch(Exception e){
+    e.printStackTrace();
+}
+    }//GEN-LAST:event_btnAtualizarTurmaActionPerformed
 
     /**
      * @param args the command line arguments

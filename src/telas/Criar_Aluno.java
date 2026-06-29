@@ -4,10 +4,11 @@
  */
 package telas;
 
-/**
- *
- * @author augusto62170066
- */
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import javax.swing.JOptionPane;
+import java.sql.ResultSet;
+
 public class Criar_Aluno extends javax.swing.JFrame {
 
     /**
@@ -43,11 +44,22 @@ public class Criar_Aluno extends javax.swing.JFrame {
 
         jLabel2.setText("Nome:");
 
+        txtNomeCriarAluno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtNomeCriarAlunoActionPerformed(evt);
+            }
+        });
+
         jLabel3.setText("CPF:");
 
         jLabel4.setText("Turma:");
 
         btnCriarAluno.setText("Criar Aluno");
+        btnCriarAluno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCriarAlunoActionPerformed(evt);
+            }
+        });
 
         btnVoltarCriarAluno.setText("Voltar");
 
@@ -101,6 +113,28 @@ public class Criar_Aluno extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnCriarAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCriarAlunoActionPerformed
+        try{
+            Connection conn = conexao.Conexao.conectar();
+            String sql = "INSERT INTO aluno(nome_aluno,cpf, ) VALUES (?,?,?)";
+            PreparedStatement stmt = conn.prepareStatement(sql);
+            stmt.setString(1, txtNomeCriarAluno.getText());
+            stmt.setString(2, txtCpfCriarAluno.getText());
+            stmt.setString(3, NOME.getText());
+            stmt.execute();
+            JOptionPane.showMessageDialog(null, "Salvo!");
+            stmt.close();
+            conn.close();
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+       
+    }//GEN-LAST:event_btnCriarAlunoActionPerformed
+
+    private void txtNomeCriarAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNomeCriarAlunoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtNomeCriarAlunoActionPerformed
 
     /**
      * @param args the command line arguments

@@ -3,11 +3,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package telas;
-
-/**
- *
- * @author augusto62170066
- */
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import javax.swing.JOptionPane;
+import java.sql.ResultSet;
 public class Atualizar_Usuarios extends javax.swing.JFrame {
 
     /**
@@ -26,6 +25,8 @@ public class Atualizar_Usuarios extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        txtUsuarioCargo = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         txtIdAtualizarUsuario = new javax.swing.JTextField();
@@ -35,6 +36,10 @@ public class Atualizar_Usuarios extends javax.swing.JFrame {
         txtSenhaAtualizarUsuario = new javax.swing.JTextField();
         btnAtualizarUsuario = new javax.swing.JButton();
         btnVoltarAtualizarUsuario = new javax.swing.JButton();
+        txtAtualizarUsuarioCargo = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
+
+        jLabel5.setText("Cargo");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -48,8 +53,15 @@ public class Atualizar_Usuarios extends javax.swing.JFrame {
         jLabel4.setText("Nova Senha:");
 
         btnAtualizarUsuario.setText("Atualizar Usuário");
+        btnAtualizarUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAtualizarUsuarioActionPerformed(evt);
+            }
+        });
 
         btnVoltarAtualizarUsuario.setText("Voltar");
+
+        jLabel6.setText("Cargo");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -72,8 +84,10 @@ public class Atualizar_Usuarios extends javax.swing.JFrame {
                         .addComponent(jLabel2)
                         .addComponent(txtIdAtualizarUsuario, javax.swing.GroupLayout.DEFAULT_SIZE, 390, Short.MAX_VALUE)
                         .addComponent(txtNomeAtualizarUsuario)
-                        .addComponent(txtSenhaAtualizarUsuario)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(txtSenhaAtualizarUsuario)
+                        .addComponent(txtAtualizarUsuarioCargo)
+                        .addComponent(jLabel6)))
+                .addContainerGap(73, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -92,7 +106,11 @@ public class Atualizar_Usuarios extends javax.swing.JFrame {
                 .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(txtSenhaAtualizarUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 68, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel6)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(txtAtualizarUsuarioCargo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(14, 14, 14)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnAtualizarUsuario)
                     .addComponent(btnVoltarAtualizarUsuario))
@@ -101,6 +119,24 @@ public class Atualizar_Usuarios extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnAtualizarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtualizarUsuarioActionPerformed
+  try{
+    Connection conn = conexao.Conexao.conectar();
+    String sql = "Update login SET usuario=?,senha=?, cargo=?  WHERE id_login=?";
+    PreparedStatement stmt = conn.prepareStatement(sql);
+    stmt.setString(1, txtNomeAtualizarUsuario.getText());
+    stmt.setString(2,txtSenhaAtualizarUsuario.getText());
+    stmt.setString(3,txtAtualizarUsuarioCargo.getText());
+    stmt.setInt(4, Integer.parseInt(txtIdAtualizarUsuario.getText()));
+    stmt.execute();
+    JOptionPane.showMessageDialog(null,"Atualizado!!");
+    stmt.close();
+    conn.close();
+}catch(Exception e){
+    e.printStackTrace();
+}
+    }//GEN-LAST:event_btnAtualizarUsuarioActionPerformed
 
     /**
      * @param args the command line arguments
@@ -144,8 +180,12 @@ public class Atualizar_Usuarios extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JTextField txtAtualizarUsuarioCargo;
     private javax.swing.JTextField txtIdAtualizarUsuario;
     private javax.swing.JTextField txtNomeAtualizarUsuario;
     private javax.swing.JTextField txtSenhaAtualizarUsuario;
+    private javax.swing.JTextField txtUsuarioCargo;
     // End of variables declaration//GEN-END:variables
 }
