@@ -105,6 +105,7 @@ public class Usuarios extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnVoltarUsuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarUsuariosActionPerformed
+<<<<<<< HEAD
 
     }//GEN-LAST:event_btnVoltarUsuariosActionPerformed
 
@@ -119,6 +120,61 @@ public class Usuarios extends javax.swing.JFrame {
     private void btnDeletarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeletarUsuarioActionPerformed
 
     }//GEN-LAST:event_btnDeletarUsuarioActionPerformed
+=======
+        Menu_Principal telas = new Menu_Principal();
+        telas.setVisible(true);
+        
+        this.dispose();
+    }//GEN-LAST:event_btnVoltarUsuariosActionPerformed
+
+    private void btnCriarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCriarUsuarioActionPerformed
+        Criar_Usuarios telas = new Criar_Usuarios();
+        telas.setVisible(true);
+        
+        this.dispose();
+    }//GEN-LAST:event_btnCriarUsuarioActionPerformed
+
+    private void btnAtualizarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtualizarUsuarioActionPerformed
+        Atualizar_Usuarios telas = new Atualizar_Usuarios();
+        telas.setVisible(true);
+        
+        this.dispose();
+    }//GEN-LAST:event_btnAtualizarUsuarioActionPerformed
+
+    private void btnDeletarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeletarUsuarioActionPerformed
+        Deletar_Usuario telas = new Deletar_Usuario();
+        telas.setVisible(true);
+        
+        this.dispose();
+    }//GEN-LAST:event_btnDeletarUsuarioActionPerformed
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(Usuarios.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(Usuarios.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(Usuarios.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(Usuarios.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+>>>>>>> 39e77be27c605ce9cdf9cc167e0a75d1c305e705
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

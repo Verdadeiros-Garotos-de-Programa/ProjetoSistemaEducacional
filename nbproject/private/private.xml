@@ -3,6 +3,7 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/C:/Users/guest.jb/Desktop/B/ProjetoSistemaEducacional/src/telas/Menu_Principal.java</file>
             <file>file:/C:/Users/guest.jb/Desktop/B/ProjetoSistemaEducacional/src/telas/Criar_Aluno.java</file>
             <file>file:/C:/Users/guest.jb/Desktop/B/ProjetoSistemaEducacional/src/telas/Atualizar_Aluno.java</file>
@@ -11,6 +12,11 @@
             <file>file:/C:/Users/guest.jb/Desktop/B/ProjetoSistemaEducacional/src/telas/Criar_Usuarios.java</file>
             <file>file:/C:/Users/guest.jb/Desktop/B/ProjetoSistemaEducacional/src/telas/Atualizar_Usuarios.java</file>
             <file>file:/C:/Users/guest.jb/Desktop/B/ProjetoSistemaEducacional/src/conexao/Conexao.java</file>
+=======
+            <file>file:/C:/Users/guest.jb/Desktop/Projetosistemas/ProjetoSistemaEducacional/src/telas/Deletar_Usuario.java</file>
+            <file>file:/C:/Users/guest.jb/Desktop/Projetosistemas/ProjetoSistemaEducacional/src/telas/Alunos.java</file>
+            <file>file:/C:/Users/guest.jb/Desktop/Projetosistemas/ProjetoSistemaEducacional/src/telas/Turmas.java</file>
+>>>>>>> 39e77be27c605ce9cdf9cc167e0a75d1c305e705
         </group>
     </open-files>
 </project-private>

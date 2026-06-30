@@ -106,6 +106,7 @@ public class Turmas extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnVoltarTurmaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarTurmaActionPerformed
+<<<<<<< HEAD
 
 
     }//GEN-LAST:event_btnVoltarTurmaActionPerformed
@@ -120,6 +121,33 @@ public class Turmas extends javax.swing.JFrame {
 
     private void btnDeletarTurmaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeletarTurmaActionPerformed
 
+=======
+        Menu_Principal telas = new Menu_Principal();
+        telas.setVisible(true);
+        
+        this.dispose();
+    }//GEN-LAST:event_btnVoltarTurmaActionPerformed
+
+    private void btnCriarTurmaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCriarTurmaActionPerformed
+        Criar_Turma telas = new Criar_Turma();
+        telas.setVisible(true);
+        
+        this.dispose();
+    }//GEN-LAST:event_btnCriarTurmaActionPerformed
+
+    private void btnAtualizarTurmaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtualizarTurmaActionPerformed
+        Atualizar_Turma telas = new Atualizar_Turma();
+        telas.setVisible(true);
+        
+        this.dispose();
+    }//GEN-LAST:event_btnAtualizarTurmaActionPerformed
+
+    private void btnDeletarTurmaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeletarTurmaActionPerformed
+        Deletar_Turma telas = new Deletar_Turma();
+        telas.setVisible(true);
+        
+        this.dispose();
+>>>>>>> 39e77be27c605ce9cdf9cc167e0a75d1c305e705
     }//GEN-LAST:event_btnDeletarTurmaActionPerformed
 
     /**

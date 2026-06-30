@@ -119,6 +119,7 @@ public class Criar_Aluno extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+<<<<<<< HEAD
 
     private void btnCriarAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCriarAlunoActionPerformed
         try{
@@ -147,6 +148,15 @@ public class Criar_Aluno extends javax.swing.JFrame {
     }//GEN-LAST:event_btnVoltarCriarAlunoActionPerformed
 
 
+=======
+    private void btnVoltarCriarAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarCriarAlunoActionPerformed
+        Alunos telas = new Alunos();
+        telas.setVisible(true);
+        
+        this.dispose();
+    }//GEN-LAST:event_btnVoltarCriarAlunoActionPerformed
+
+>>>>>>> 39e77be27c605ce9cdf9cc167e0a75d1c305e705
     /**
      * @param args the command line arguments
      */

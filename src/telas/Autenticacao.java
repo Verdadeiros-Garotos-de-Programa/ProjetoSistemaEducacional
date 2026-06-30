@@ -1,13 +1,9 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package telas;
 
-/**
- *
- * @author augusto62170066
- */
+import javax.swing.JOptionPane;
+import usuario.Usuario;
+import gerenciarusuario.GerenciarUsuario;
+
 public class Autenticacao extends javax.swing.JFrame {
 
     /**
@@ -43,6 +39,11 @@ public class Autenticacao extends javax.swing.JFrame {
         jLabel3.setText("Senha:");
 
         btnEntrar.setText("Entrar");
+        btnEntrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEntrarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -85,6 +86,30 @@ public class Autenticacao extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEntrarActionPerformed
+        String usuarioDigitado = txtUsuario.getText().trim();
+        String senhaDigitada = txtSenha.getText().trim();
+        
+        if (usuarioDigitado.isEmpty() || senhaDigitada.isEmpty()) {
+            javax.swing.JOptionPane.showMessageDialog(this, "Por favor, preencha todos os campos!");
+            return;
+        }
+        
+        GerenciarUsuario gerenciador = new GerenciarUsuario();
+        Usuario usuarioLogado = gerenciador.autenticar(usuarioDigitado, senhaDigitada);
+        
+        if (usuarioLogado != null) {
+            javax.swing.JOptionPane.showMessageDialog(this, "Login realizado com sucesso! Bem-vindo.");
+            this.dispose();
+            
+            Menu_Principal menu = new Menu_Principal(usuarioLogado);
+            menu.setVisible(true);
+        }
+        else {
+            javax.swing.JOptionPane.showMessageDialog(this, "Usuário ou senha inválidos.");
+        }
+    }//GEN-LAST:event_btnEntrarActionPerformed
 
     /**
      * @param args the command line arguments

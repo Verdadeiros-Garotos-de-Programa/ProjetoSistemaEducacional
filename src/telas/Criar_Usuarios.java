@@ -4,10 +4,19 @@
  */
 package telas;
 
+<<<<<<< HEAD
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import javax.swing.JOptionPane;
 import java.sql.ResultSet;
+=======
+import usuario.Usuario;
+import gerenciarusuario.GerenciarUsuario;
+/**
+ *
+ * @author augusto62170066
+ */
+>>>>>>> 39e77be27c605ce9cdf9cc167e0a75d1c305e705
 public class Criar_Usuarios extends javax.swing.JFrame {
 
     /**
@@ -34,7 +43,11 @@ public class Criar_Usuarios extends javax.swing.JFrame {
         txtSenhaCriarUsuario = new javax.swing.JTextField();
         btnCriarUsuario = new javax.swing.JButton();
         btnVoltarCriarUsuario = new javax.swing.JButton();
+<<<<<<< HEAD
         txtUsuarioCargo = new javax.swing.JTextField();
+=======
+        cbCargo = new javax.swing.JComboBox<>();
+>>>>>>> 39e77be27c605ce9cdf9cc167e0a75d1c305e705
         jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -60,7 +73,13 @@ public class Criar_Usuarios extends javax.swing.JFrame {
             }
         });
 
+<<<<<<< HEAD
         jLabel4.setText("Cargo");
+=======
+        cbCargo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Diretor", "Professor", "Orientador", "Administrativo" }));
+
+        jLabel4.setText("Cargo:");
+>>>>>>> 39e77be27c605ce9cdf9cc167e0a75d1c305e705
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -78,6 +97,7 @@ public class Criar_Usuarios extends javax.swing.JFrame {
                                 .addComponent(btnCriarUsuario)
                                 .addGap(18, 18, 18)
                                 .addComponent(btnVoltarCriarUsuario))
+<<<<<<< HEAD
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(jLabel2)
                                 .addComponent(txtNomeCriarUsuario, javax.swing.GroupLayout.DEFAULT_SIZE, 399, Short.MAX_VALUE)
@@ -85,6 +105,18 @@ public class Criar_Usuarios extends javax.swing.JFrame {
                                 .addComponent(txtSenhaCriarUsuario)
                                 .addComponent(txtUsuarioCargo))
                             .addComponent(jLabel4))))
+=======
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(jLabel4)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(cbCargo, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jLabel2)
+                                    .addComponent(txtNomeCriarUsuario, javax.swing.GroupLayout.DEFAULT_SIZE, 399, Short.MAX_VALUE)
+                                    .addComponent(jLabel3)
+                                    .addComponent(txtSenhaCriarUsuario))))))
+>>>>>>> 39e77be27c605ce9cdf9cc167e0a75d1c305e705
                 .addContainerGap(69, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -100,11 +132,19 @@ public class Criar_Usuarios extends javax.swing.JFrame {
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(txtSenhaCriarUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+<<<<<<< HEAD
                 .addGap(18, 18, 18)
                 .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(txtUsuarioCargo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(36, 36, 36)
+=======
+                .addGap(33, 33, 33)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cbCargo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel4))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
+>>>>>>> 39e77be27c605ce9cdf9cc167e0a75d1c305e705
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnCriarUsuario)
                     .addComponent(btnVoltarCriarUsuario))
@@ -114,6 +154,64 @@ public class Criar_Usuarios extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+<<<<<<< HEAD
+=======
+    private void btnVoltarCriarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarCriarUsuarioActionPerformed
+
+    }//GEN-LAST:event_btnVoltarCriarUsuarioActionPerformed
+
+    private void btnCriarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCriarUsuarioActionPerformed
+        String novoUsuario = txtNomeCriarUsuario.getText().trim();
+    String novaSenha = txtSenhaCriarUsuario.getText().trim();
+    String selecionarCargo = cbCargo.getSelectedItem().toString(); 
+
+    if (novoUsuario.isEmpty() || novaSenha.isEmpty()) {
+        javax.swing.JOptionPane.showMessageDialog(this, "preencha todos os campos!");
+        return;
+    }
+    
+    Usuario novoUsuarioObjeto = new Usuario(0, novoUsuario, selecionarCargo);
+    
+    gerenciarusuario.GerenciarUsuario gerenciador = new gerenciarusuario.GerenciarUsuario();
+    boolean salvou = gerenciador.cadastrarNovoUsuario(novoUsuarioObjeto, novaSenha);
+    
+    if (salvou) {
+        javax.swing.JOptionPane.showMessageDialog(this, "Novo usuário cadastrado com sucesso!");
+        txtNomeCriarUsuario.setText("");
+        txtSenhaCriarUsuario.setText("");
+    } else {
+        javax.swing.JOptionPane.showMessageDialog(this, "Erro ao salvar o usuário no banco.");
+    }
+    
+    }//GEN-LAST:event_btnCriarUsuarioActionPerformed
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(Criar_Usuarios.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(Criar_Usuarios.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(Criar_Usuarios.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(Criar_Usuarios.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+>>>>>>> 39e77be27c605ce9cdf9cc167e0a75d1c305e705
 
     private void btnCriarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCriarUsuarioActionPerformed
     try{
@@ -142,6 +240,7 @@ public class Criar_Usuarios extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCriarUsuario;
     private javax.swing.JButton btnVoltarCriarUsuario;
+    private javax.swing.JComboBox<String> cbCargo;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

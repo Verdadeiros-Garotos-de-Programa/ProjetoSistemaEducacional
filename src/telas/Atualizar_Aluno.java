@@ -122,6 +122,7 @@ public class Atualizar_Aluno extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+<<<<<<< HEAD
 
     private void btnAtualizarAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtualizarAlunoActionPerformed
 try{
@@ -146,6 +147,15 @@ try{
     }//GEN-LAST:event_btnVoltarAtualizarAlunoActionPerformed
 
 
+=======
+    private void btnVoltarAtualizarAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarAtualizarAlunoActionPerformed
+        Alunos telas = new Alunos();
+        telas.setVisible(true);
+        
+        this.dispose();
+    }//GEN-LAST:event_btnVoltarAtualizarAlunoActionPerformed
+
+>>>>>>> 39e77be27c605ce9cdf9cc167e0a75d1c305e705
     /**
      * @param args the command line arguments
      */

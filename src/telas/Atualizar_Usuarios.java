@@ -65,8 +65,11 @@ public class Atualizar_Usuarios extends javax.swing.JFrame {
                 btnVoltarAtualizarUsuarioActionPerformed(evt);
             }
         });
+<<<<<<< HEAD
 
         jLabel6.setText("Cargo");
+=======
+>>>>>>> 39e77be27c605ce9cdf9cc167e0a75d1c305e705
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -125,6 +128,7 @@ public class Atualizar_Usuarios extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+<<<<<<< HEAD
 
     private void btnAtualizarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtualizarUsuarioActionPerformed
   try{
@@ -149,6 +153,15 @@ public class Atualizar_Usuarios extends javax.swing.JFrame {
     }//GEN-LAST:event_btnVoltarAtualizarUsuarioActionPerformed
 
 
+=======
+    private void btnVoltarAtualizarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarAtualizarUsuarioActionPerformed
+        Usuarios telas = new Usuarios();
+        telas.setVisible(true);
+        
+        this.dispose();
+    }//GEN-LAST:event_btnVoltarAtualizarUsuarioActionPerformed
+
+>>>>>>> 39e77be27c605ce9cdf9cc167e0a75d1c305e705
     /**
      * @param args the command line arguments
      */

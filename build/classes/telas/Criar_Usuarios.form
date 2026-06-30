@@ -41,12 +41,27 @@
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Component id="btnVoltarCriarUsuario" min="-2" max="-2" attributes="0"/>
                           </Group>
+<<<<<<< HEAD
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
                               <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                               <Component id="txtNomeCriarUsuario" pref="399" max="32767" attributes="0"/>
                               <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="txtSenhaCriarUsuario" alignment="0" max="32767" attributes="0"/>
                               <Component id="txtUsuarioCargo" alignment="0" max="32767" attributes="0"/>
+=======
+                          <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="cbCargo" min="-2" pref="128" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtNomeCriarUsuario" pref="399" max="32767" attributes="0"/>
+                                  <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtSenhaCriarUsuario" alignment="0" max="32767" attributes="0"/>
+                              </Group>
+>>>>>>> 39e77be27c605ce9cdf9cc167e0a75d1c305e705
                           </Group>
                           <Component id="jLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
@@ -69,11 +84,20 @@
               <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Component id="txtSenhaCriarUsuario" min="-2" max="-2" attributes="0"/>
+<<<<<<< HEAD
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="32767" attributes="0"/>
               <Component id="txtUsuarioCargo" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+=======
+              <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="cbCargo" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace pref="45" max="32767" attributes="0"/>
+>>>>>>> 39e77be27c605ce9cdf9cc167e0a75d1c305e705
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="btnCriarUsuario" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="btnVoltarCriarUsuario" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -122,11 +146,32 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnVoltarCriarUsuarioActionPerformed"/>
       </Events>
     </Component>
+<<<<<<< HEAD
     <Component class="javax.swing.JTextField" name="txtUsuarioCargo">
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel4">
       <Properties>
         <Property name="text" type="java.lang.String" value="Cargo"/>
+=======
+    <Component class="javax.swing.JComboBox" name="cbCargo">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="4">
+            <StringItem index="0" value="Diretor"/>
+            <StringItem index="1" value="Professor"/>
+            <StringItem index="2" value="Orientador"/>
+            <StringItem index="3" value="Administrativo"/>
+          </StringArray>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel4">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Cargo:"/>
+>>>>>>> 39e77be27c605ce9cdf9cc167e0a75d1c305e705
       </Properties>
     </Component>
   </SubComponents>

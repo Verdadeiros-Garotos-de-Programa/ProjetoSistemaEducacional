@@ -136,6 +136,7 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnVoltarAtualizarUsuarioActionPerformed"/>
       </Events>
+<<<<<<< HEAD
     </Component>
     <Component class="javax.swing.JTextField" name="txtAtualizarUsuarioCargo">
     </Component>
@@ -143,6 +144,8 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Cargo"/>
       </Properties>
+=======
+>>>>>>> 39e77be27c605ce9cdf9cc167e0a75d1c305e705
     </Component>
   </SubComponents>
 </Form>

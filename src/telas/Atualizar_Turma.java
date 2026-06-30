@@ -108,6 +108,7 @@ public class Atualizar_Turma extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+<<<<<<< HEAD
     private void btnAtualizarTurmaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtualizarTurmaActionPerformed
 try{
     Connection conn = conexao.Conexao.conectar();
@@ -133,6 +134,15 @@ try{
     }//GEN-LAST:event_btnVoltarAtualizarTurmaActionPerformed
 
 
+=======
+    private void btnVoltarAtualizarTurmaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarAtualizarTurmaActionPerformed
+        Turmas telas = new Turmas();
+        telas.setVisible(true);
+        
+        this.dispose();
+    }//GEN-LAST:event_btnVoltarAtualizarTurmaActionPerformed
+
+>>>>>>> 39e77be27c605ce9cdf9cc167e0a75d1c305e705
     /**
      * @param args the command line arguments
      */

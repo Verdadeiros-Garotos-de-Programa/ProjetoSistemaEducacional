@@ -107,6 +107,7 @@ public class Alunos extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnVoltarAlujnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarAlujnoActionPerformed
+<<<<<<< HEAD
 
     }//GEN-LAST:event_btnVoltarAlujnoActionPerformed
 
@@ -120,6 +121,33 @@ public class Alunos extends javax.swing.JFrame {
 
     private void btnDeletarAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeletarAlunoActionPerformed
 
+=======
+        Menu_Principal telas = new Menu_Principal();
+        telas.setVisible(true);
+        
+        this.dispose();
+    }//GEN-LAST:event_btnVoltarAlujnoActionPerformed
+
+    private void btnCriarAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCriarAlunoActionPerformed
+        Criar_Aluno telas = new Criar_Aluno();
+        telas.setVisible(true);
+        
+        this.dispose();
+    }//GEN-LAST:event_btnCriarAlunoActionPerformed
+
+    private void btnAtualizarAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtualizarAlunoActionPerformed
+        Atualizar_Aluno telas = new Atualizar_Aluno();
+        telas.setVisible(true);
+        
+        this.dispose();
+    }//GEN-LAST:event_btnAtualizarAlunoActionPerformed
+
+    private void btnDeletarAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeletarAlunoActionPerformed
+        Deletar_Aluno telas = new Deletar_Aluno();
+        telas.setVisible(true);
+        
+        this.dispose();
+>>>>>>> 39e77be27c605ce9cdf9cc167e0a75d1c305e705
     }//GEN-LAST:event_btnDeletarAlunoActionPerformed
 
     /**

@@ -92,6 +92,7 @@ public class Criar_Turma extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+<<<<<<< HEAD
 
     private void btnCriarTurmaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCriarTurmaActionPerformed
         try{
@@ -110,6 +111,13 @@ public class Criar_Turma extends javax.swing.JFrame {
 
     private void btnVoltarCriarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarCriarUsuarioActionPerformed
 
+=======
+    private void btnVoltarCriarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarCriarUsuarioActionPerformed
+        Turmas telas = new Turmas();
+        telas.setVisible(true);
+        
+        this.dispose();
+>>>>>>> 39e77be27c605ce9cdf9cc167e0a75d1c305e705
     }//GEN-LAST:event_btnVoltarCriarUsuarioActionPerformed
 
     /**
