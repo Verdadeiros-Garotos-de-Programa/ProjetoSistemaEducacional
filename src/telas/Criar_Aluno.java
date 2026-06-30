@@ -119,7 +119,7 @@ public class Criar_Aluno extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-<<<<<<< HEAD
+
     private void btnCriarAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCriarAlunoActionPerformed
         try{
             Connection conn = conexao.Conexao.conectar();
@@ -141,14 +141,11 @@ public class Criar_Aluno extends javax.swing.JFrame {
     private void txtNomeCriarAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNomeCriarAlunoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtNomeCriarAlunoActionPerformed
-=======
+
     private void btnVoltarCriarAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarCriarAlunoActionPerformed
-        Alunos telas = new Alunos();
-        telas.setVisible(true);
-        
-        this.dispose();
+
     }//GEN-LAST:event_btnVoltarCriarAlunoActionPerformed
->>>>>>> origin/master
+
 
     /**
      * @param args the command line arguments

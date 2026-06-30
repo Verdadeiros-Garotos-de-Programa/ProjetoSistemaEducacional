@@ -125,7 +125,7 @@ public class Atualizar_Usuarios extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-<<<<<<< HEAD
+
     private void btnAtualizarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtualizarUsuarioActionPerformed
   try{
     Connection conn = conexao.Conexao.conectar();
@@ -143,14 +143,11 @@ public class Atualizar_Usuarios extends javax.swing.JFrame {
     e.printStackTrace();
 }
     }//GEN-LAST:event_btnAtualizarUsuarioActionPerformed
-=======
+
     private void btnVoltarAtualizarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarAtualizarUsuarioActionPerformed
-        Usuarios telas = new Usuarios();
-        telas.setVisible(true);
-        
-        this.dispose();
+
     }//GEN-LAST:event_btnVoltarAtualizarUsuarioActionPerformed
->>>>>>> origin/master
+
 
     /**
      * @param args the command line arguments

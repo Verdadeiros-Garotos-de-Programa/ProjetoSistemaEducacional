@@ -106,31 +106,20 @@ public class Turmas extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnVoltarTurmaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarTurmaActionPerformed
-        Menu_Principal telas = new Menu_Principal();
-        telas.setVisible(true);
-        
-        this.dispose();
+
+
     }//GEN-LAST:event_btnVoltarTurmaActionPerformed
 
     private void btnCriarTurmaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCriarTurmaActionPerformed
-        Criar_Turma telas = new Criar_Turma();
-        telas.setVisible(true);
-        
-        this.dispose();
+
     }//GEN-LAST:event_btnCriarTurmaActionPerformed
 
     private void btnAtualizarTurmaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtualizarTurmaActionPerformed
-        Atualizar_Turma telas = new Atualizar_Turma();
-        telas.setVisible(true);
-        
-        this.dispose();
+
     }//GEN-LAST:event_btnAtualizarTurmaActionPerformed
 
     private void btnDeletarTurmaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeletarTurmaActionPerformed
-        Deletar_Turma telas = new Deletar_Turma();
-        telas.setVisible(true);
-        
-        this.dispose();
+
     }//GEN-LAST:event_btnDeletarTurmaActionPerformed
 
     /**

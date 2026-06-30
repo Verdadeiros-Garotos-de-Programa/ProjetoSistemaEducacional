@@ -87,10 +87,7 @@ public class Deletar_Turma extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnVoltarDeletarTurmaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarDeletarTurmaActionPerformed
-        Turmas telas = new Turmas();
-        telas.setVisible(true);
-        
-        this.dispose();
+
     }//GEN-LAST:event_btnVoltarDeletarTurmaActionPerformed
 
     /**

@@ -97,31 +97,19 @@ public class Menu_Principal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnUsuariosMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUsuariosMenuActionPerformed
-        Usuarios telas = new Usuarios();
-        telas.setVisible(true);
-        
-        this.dispose();
+
     }//GEN-LAST:event_btnUsuariosMenuActionPerformed
 
     private void btnAlunosMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAlunosMenuActionPerformed
-        Alunos telas = new Alunos();
-        telas.setVisible(true);
-        
-        this.dispose();
+
     }//GEN-LAST:event_btnAlunosMenuActionPerformed
 
     private void btnTurmasMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTurmasMenuActionPerformed
-        Turmas telas = new Turmas();
-        telas.setVisible(true);
-        
-        this.dispose();
+
     }//GEN-LAST:event_btnTurmasMenuActionPerformed
 
     private void btnVoltarMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarMenuActionPerformed
-        Autenticacao telas = new Autenticacao();
-        telas.setVisible(true);
-        
-        this.dispose();
+
     }//GEN-LAST:event_btnVoltarMenuActionPerformed
 
     /**
@@ -141,13 +129,13 @@ public class Menu_Principal extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Menu_Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Usuarios.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Menu_Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Usuarios.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Menu_Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Usuarios.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Menu_Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Usuarios.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 

@@ -107,31 +107,19 @@ public class Alunos extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnVoltarAlujnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarAlujnoActionPerformed
-        Menu_Principal telas = new Menu_Principal();
-        telas.setVisible(true);
-        
-        this.dispose();
+
     }//GEN-LAST:event_btnVoltarAlujnoActionPerformed
 
     private void btnCriarAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCriarAlunoActionPerformed
-        Criar_Aluno telas = new Criar_Aluno();
-        telas.setVisible(true);
-        
-        this.dispose();
+
     }//GEN-LAST:event_btnCriarAlunoActionPerformed
 
     private void btnAtualizarAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtualizarAlunoActionPerformed
-        Atualizar_Aluno telas = new Atualizar_Aluno();
-        telas.setVisible(true);
-        
-        this.dispose();
+
     }//GEN-LAST:event_btnAtualizarAlunoActionPerformed
 
     private void btnDeletarAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeletarAlunoActionPerformed
-        Deletar_Aluno telas = new Deletar_Aluno();
-        telas.setVisible(true);
-        
-        this.dispose();
+
     }//GEN-LAST:event_btnDeletarAlunoActionPerformed
 
     /**

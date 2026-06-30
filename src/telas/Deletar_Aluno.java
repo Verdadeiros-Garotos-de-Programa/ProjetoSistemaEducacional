@@ -87,10 +87,7 @@ public class Deletar_Aluno extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnVoltarDeletarAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarDeletarAlunoActionPerformed
-        Alunos telas = new Alunos();
-        telas.setVisible(true);
-        
-        this.dispose();
+
     }//GEN-LAST:event_btnVoltarDeletarAlunoActionPerformed
 
     /**
