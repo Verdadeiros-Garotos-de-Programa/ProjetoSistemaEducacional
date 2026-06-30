@@ -14,7 +14,7 @@ import java.sql.SQLException;
 
 public class Conexao {
      public static String URL =
-            "jdbc:mysql://localhost:3306/sistema_escolar";
+            "jdbc:mysql://localhost:3306/db_gestao_escolar";
     public static String USUARIO="root";
     public static String SENHA="root";
     

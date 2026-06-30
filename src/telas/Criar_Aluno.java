@@ -52,7 +52,7 @@ public class Criar_Aluno extends javax.swing.JFrame {
 
         jLabel3.setText("CPF:");
 
-        jLabel4.setText("Turma:");
+        jLabel4.setText("ID Turma:");
 
         btnCriarAluno.setText("Criar Aluno");
         btnCriarAluno.addActionListener(new java.awt.event.ActionListener() {
@@ -108,7 +108,7 @@ public class Criar_Aluno extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnCriarAluno)
                     .addComponent(btnVoltarCriarAluno))
-                .addContainerGap(50, Short.MAX_VALUE))
+                .addContainerGap(48, Short.MAX_VALUE))
         );
 
         pack();
@@ -117,13 +117,13 @@ public class Criar_Aluno extends javax.swing.JFrame {
     private void btnCriarAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCriarAlunoActionPerformed
         try{
             Connection conn = conexao.Conexao.conectar();
-            String sql = "INSERT INTO aluno(nome_aluno,cpf, ) VALUES (?,?,?)";
+            String sql = "INSERT INTO aluno(nome_aluno,cpf,id_turma ) VALUES (?,?,?)";
             PreparedStatement stmt = conn.prepareStatement(sql);
             stmt.setString(1, txtNomeCriarAluno.getText());
             stmt.setString(2, txtCpfCriarAluno.getText());
-            stmt.setString(3, NOME.getText());
+            stmt.setString(3, txtTurmaCriarAluno.getText());
             stmt.execute();
-            JOptionPane.showMessageDialog(null, "Salvo!");
+            JOptionPane.showMessageDialog(null, "Salvo!","Informação", JOptionPane.INFORMATION_MESSAGE);
             stmt.close();
             conn.close();
         }catch(Exception e){

@@ -42,6 +42,12 @@ public class Atualizar_Turma extends javax.swing.JFrame {
 
         jLabel3.setText("Nome:");
 
+        txtIdAtualizarTurma.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtIdAtualizarTurmaActionPerformed(evt);
+            }
+        });
+
         btnAtualizarTurma.setText("Atualizar Turma");
         btnAtualizarTurma.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -112,6 +118,10 @@ try{
     e.printStackTrace();
 }
     }//GEN-LAST:event_btnAtualizarTurmaActionPerformed
+
+    private void txtIdAtualizarTurmaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIdAtualizarTurmaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtIdAtualizarTurmaActionPerformed
 
     /**
      * @param args the command line arguments

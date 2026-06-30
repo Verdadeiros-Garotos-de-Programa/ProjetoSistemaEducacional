@@ -112,7 +112,7 @@ public class Criar_Usuarios extends javax.swing.JFrame {
     private void btnCriarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCriarUsuarioActionPerformed
     try{
             Connection conn = conexao.Conexao.conectar();
-            String sql = "INSERT INTO aluno(usuario, senha, cargo) VALUES (?,?,?)";
+            String sql = "INSERT INTO login(usuario, senha, cargo) VALUES (?,?,?)";
             PreparedStatement stmt = conn.prepareStatement(sql);
             stmt.setString(1, txtNomeCriarUsuario.getText());
             stmt.setString(2, txtSenhaCriarUsuario.getText());
