@@ -31,7 +31,7 @@ public class GerenciarUsuario {
         return null;
     }
     public boolean cadastrarNovoUsuario(Usuario novoUsuario, String senhaDigitada) {
-        String sql = "INSERT INTO usuarios (usuario, senha, cargo) VALUES (?, ?, ?)";
+        String sql = "INSERT INTO login (usuario, senha, cargo) VALUES (?, ?, ?)";
         
         try (Connection conn = Conexao.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {

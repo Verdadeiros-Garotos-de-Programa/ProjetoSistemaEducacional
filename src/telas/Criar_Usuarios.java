@@ -4,6 +4,8 @@
  */
 package telas;
 
+import usuario.Usuario;
+import gerenciarusuario.GerenciarUsuario;
 /**
  *
  * @author augusto62170066
@@ -130,6 +132,19 @@ public class Criar_Usuarios extends javax.swing.JFrame {
     if (novoUsuario.isEmpty() || novaSenha.isEmpty()) {
         javax.swing.JOptionPane.showMessageDialog(this, "preencha todos os campos!");
         return;
+    }
+    
+    Usuario novoUsuarioObjeto = new Usuario(0, novoUsuario, selecionarCargo);
+    
+    gerenciarusuario.GerenciarUsuario gerenciador = new gerenciarusuario.GerenciarUsuario();
+    boolean salvou = gerenciador.cadastrarNovoUsuario(novoUsuarioObjeto, novaSenha);
+    
+    if (salvou) {
+        javax.swing.JOptionPane.showMessageDialog(this, "Novo usuário cadastrado com sucesso!");
+        txtNomeCriarUsuario.setText("");
+        txtSenhaCriarUsuario.setText("");
+    } else {
+        javax.swing.JOptionPane.showMessageDialog(this, "Erro ao salvar o usuário no banco.");
     }
     
     }//GEN-LAST:event_btnCriarUsuarioActionPerformed
