@@ -24,6 +24,7 @@ public class Menu_Principal extends javax.swing.JFrame {
         btnTurmasMenu = new javax.swing.JButton();
         btnAlunosMenu = new javax.swing.JButton();
         btnVoltarMenu = new javax.swing.JButton();
+        btnRelatoriosMenu = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -58,6 +59,8 @@ public class Menu_Principal extends javax.swing.JFrame {
             }
         });
 
+        btnRelatoriosMenu.setText("Relatórios");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -65,16 +68,17 @@ public class Menu_Principal extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(124, 124, 124)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(btnUsuariosMenu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(btnTurmasMenu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnAlunosMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnAlunosMenu, javax.swing.GroupLayout.DEFAULT_SIZE, 136, Short.MAX_VALUE)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(29, 29, 29)
-                                .addComponent(btnVoltarMenu)))
-                        .addGap(9, 9, 9))
-                    .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING))
+                                .addComponent(btnVoltarMenu))
+                            .addComponent(btnRelatoriosMenu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(9, 9, 9)))
                 .addContainerGap(128, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -88,7 +92,9 @@ public class Menu_Principal extends javax.swing.JFrame {
                 .addComponent(btnTurmasMenu)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnAlunosMenu)
-                .addGap(70, 70, 70)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnRelatoriosMenu)
+                .addGap(35, 35, 35)
                 .addComponent(btnVoltarMenu)
                 .addGap(31, 31, 31))
         );
@@ -161,6 +167,7 @@ public class Menu_Principal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAlunosMenu;
+    private javax.swing.JButton btnRelatoriosMenu;
     private javax.swing.JButton btnTurmasMenu;
     private javax.swing.JButton btnUsuariosMenu;
     private javax.swing.JButton btnVoltarMenu;
