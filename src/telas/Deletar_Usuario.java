@@ -42,6 +42,11 @@ public class Deletar_Usuario extends javax.swing.JFrame {
         btnDeletarUsuario.setText("Deletar Usuário");
 
         btnVoltarDeletarUsuario.setText("Voltar");
+        btnVoltarDeletarUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVoltarDeletarUsuarioActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -80,6 +85,13 @@ public class Deletar_Usuario extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnVoltarDeletarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarDeletarUsuarioActionPerformed
+        Usuarios telas = new Usuarios();
+        telas.setVisible(true);
+        
+        this.dispose();
+    }//GEN-LAST:event_btnVoltarDeletarUsuarioActionPerformed
 
     /**
      * @param args the command line arguments

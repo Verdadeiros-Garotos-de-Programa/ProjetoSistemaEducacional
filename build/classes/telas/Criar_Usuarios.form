@@ -123,6 +123,7 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnVoltarCriarUsuarioActionPerformed"/>
       </Events>
+<<<<<<< HEAD
     </Component>
     <Component class="javax.swing.JComboBox" name="cbCargo">
       <Properties>
@@ -143,6 +144,8 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Cargo:"/>
       </Properties>
+=======
+>>>>>>> origin/master
     </Component>
   </SubComponents>
 </Form>

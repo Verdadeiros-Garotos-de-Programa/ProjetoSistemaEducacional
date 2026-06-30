@@ -1,14 +1,14 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package telas;
+
 
 import usuario.Usuario;
 /**
  *
  * @author augusto62170066
  */
+
+
+
 public class Menu_Principal extends javax.swing.JFrame {
 
     private Usuario usuarioLogado;
@@ -50,6 +50,11 @@ public class Menu_Principal extends javax.swing.JFrame {
         });
 
         btnTurmasMenu.setText("Turmas");
+        btnTurmasMenu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnTurmasMenuActionPerformed(evt);
+            }
+        });
 
         btnAlunosMenu.setText("Alunos");
         btnAlunosMenu.addActionListener(new java.awt.event.ActionListener() {
@@ -59,6 +64,11 @@ public class Menu_Principal extends javax.swing.JFrame {
         });
 
         btnVoltarMenu.setText("Voltar");
+        btnVoltarMenu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVoltarMenuActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -99,13 +109,36 @@ public class Menu_Principal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnUsuariosMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUsuariosMenuActionPerformed
-        Criar_Usuarios telaCadastro = new Criar_Usuarios();
-        telaCadastro.setVisible(true);
+
+        
+
+        Usuarios telas = new Usuarios();
+        telas.setVisible(true);
+        
+        this.dispose();
+
     }//GEN-LAST:event_btnUsuariosMenuActionPerformed
 
     private void btnAlunosMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAlunosMenuActionPerformed
-        // TODO add your handling code here:
+        Alunos telas = new Alunos();
+        telas.setVisible(true);
+        
+        this.dispose();
     }//GEN-LAST:event_btnAlunosMenuActionPerformed
+
+    private void btnTurmasMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTurmasMenuActionPerformed
+        Turmas telas = new Turmas();
+        telas.setVisible(true);
+        
+        this.dispose();
+    }//GEN-LAST:event_btnTurmasMenuActionPerformed
+
+    private void btnVoltarMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarMenuActionPerformed
+        Autenticacao telas = new Autenticacao();
+        telas.setVisible(true);
+        
+        this.dispose();
+    }//GEN-LAST:event_btnVoltarMenuActionPerformed
 
     /**
      * @param args the command line arguments
@@ -137,7 +170,7 @@ public class Menu_Principal extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Menu_Principal().setVisible(true);
+                new Menu_Principal(null).setVisible(true);
             }
         });
     }
