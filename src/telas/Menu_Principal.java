@@ -1,14 +1,26 @@
 package telas;
 
 
+import usuario.Usuario;
+/**
+ *
+ * @author augusto62170066
+ */
+
+
+
 public class Menu_Principal extends javax.swing.JFrame {
 
+    private Usuario usuarioLogado;
+    
+    public Menu_Principal(Usuario usuario){
+        this.usuarioLogado = usuario;
+        
+        initComponents();
+    }
     /**
      * Creates new form Menu_Principal
      */
-    public Menu_Principal() {
-        initComponents();
-    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -97,10 +109,14 @@ public class Menu_Principal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnUsuariosMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUsuariosMenuActionPerformed
+
+        
+
         Usuarios telas = new Usuarios();
         telas.setVisible(true);
         
         this.dispose();
+
     }//GEN-LAST:event_btnUsuariosMenuActionPerformed
 
     private void btnAlunosMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAlunosMenuActionPerformed
@@ -154,7 +170,7 @@ public class Menu_Principal extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Menu_Principal().setVisible(true);
+                new Menu_Principal(null).setVisible(true);
             }
         });
     }
