@@ -58,6 +58,11 @@ public class Atualizar_Aluno extends javax.swing.JFrame {
         });
 
         btnVoltarAtualizarAluno.setText("Voltar");
+        btnVoltarAtualizarAluno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVoltarAtualizarAlunoActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -117,6 +122,7 @@ public class Atualizar_Aluno extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+<<<<<<< HEAD
     private void btnAtualizarAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtualizarAlunoActionPerformed
 try{
     Connection conn = conexao.Conexao.conectar();
@@ -134,6 +140,14 @@ try{
     e.printStackTrace();
 }
     }//GEN-LAST:event_btnAtualizarAlunoActionPerformed
+=======
+    private void btnVoltarAtualizarAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarAtualizarAlunoActionPerformed
+        Alunos telas = new Alunos();
+        telas.setVisible(true);
+        
+        this.dispose();
+    }//GEN-LAST:event_btnVoltarAtualizarAlunoActionPerformed
+>>>>>>> origin/master
 
     /**
      * @param args the command line arguments

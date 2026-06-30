@@ -47,6 +47,11 @@ public class Criar_Turma extends javax.swing.JFrame {
         });
 
         btnVoltarCriarUsuario.setText("Voltar");
+        btnVoltarCriarUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVoltarCriarUsuarioActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -87,6 +92,7 @@ public class Criar_Turma extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+<<<<<<< HEAD
     private void btnCriarTurmaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCriarTurmaActionPerformed
         try{
             Connection conn = conexao.Conexao.conectar();
@@ -101,6 +107,14 @@ public class Criar_Turma extends javax.swing.JFrame {
             e.printStackTrace();
         }
     }//GEN-LAST:event_btnCriarTurmaActionPerformed
+=======
+    private void btnVoltarCriarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarCriarUsuarioActionPerformed
+        Turmas telas = new Turmas();
+        telas.setVisible(true);
+        
+        this.dispose();
+    }//GEN-LAST:event_btnVoltarCriarUsuarioActionPerformed
+>>>>>>> origin/master
 
     /**
      * @param args the command line arguments

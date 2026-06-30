@@ -42,6 +42,11 @@ public class Deletar_Turma extends javax.swing.JFrame {
         btnDeletarTurma.setText("Deletar Turma");
 
         btnVoltarDeletarTurma.setText("Voltar");
+        btnVoltarDeletarTurma.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVoltarDeletarTurmaActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -80,6 +85,13 @@ public class Deletar_Turma extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnVoltarDeletarTurmaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarDeletarTurmaActionPerformed
+        Turmas telas = new Turmas();
+        telas.setVisible(true);
+        
+        this.dispose();
+    }//GEN-LAST:event_btnVoltarDeletarTurmaActionPerformed
 
     /**
      * @param args the command line arguments

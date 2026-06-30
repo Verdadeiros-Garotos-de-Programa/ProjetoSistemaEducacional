@@ -54,6 +54,11 @@ public class Criar_Usuarios extends javax.swing.JFrame {
         });
 
         btnVoltarCriarUsuario.setText("Voltar");
+        btnVoltarCriarUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVoltarCriarUsuarioActionPerformed(evt);
+            }
+        });
 
         jLabel4.setText("Cargo");
 
@@ -109,6 +114,7 @@ public class Criar_Usuarios extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+<<<<<<< HEAD
     private void btnCriarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCriarUsuarioActionPerformed
     try{
             Connection conn = conexao.Conexao.conectar();
@@ -125,6 +131,14 @@ public class Criar_Usuarios extends javax.swing.JFrame {
             e.printStackTrace();
         }
     }//GEN-LAST:event_btnCriarUsuarioActionPerformed
+=======
+    private void btnVoltarCriarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarCriarUsuarioActionPerformed
+        Usuarios telas = new Usuarios();
+        telas.setVisible(true);
+        
+        this.dispose();
+    }//GEN-LAST:event_btnVoltarCriarUsuarioActionPerformed
+>>>>>>> origin/master
 
     /**
      * @param args the command line arguments
